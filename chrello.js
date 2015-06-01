@@ -4,6 +4,9 @@ Items = new Meteor.Collection('items');
 
 if (Meteor.isClient) {
 
+Meteor.subscribe('lists');
+Meteor.subscribe('cards');
+
 Template.body.helpers({
 	slideWidth : function() {
 		var count = Status.find({
@@ -169,9 +172,29 @@ Template.item.events({
 } // end is client
 
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
+
+	Meteor.publish('lists', function() {
+		if (!this.userId) {
+			return null;
+		}
+
+		return Status.find({
+			creator : this.userId
+		}, {sort: {priority : 1}} );
+
+	});
+
+	Meteor.publish('cards', function() {
+		if (!this.userId) {
+			return null;
+		}
+
+		return Items.find({
+			creator : this.userId
+		}, {sort: {priority : 1}} );
+
+	});
+	
 }
 
 Meteor.methods({
