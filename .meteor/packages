@@ -9,6 +9,7 @@ meteor-platform
 # insecure
 
 mrt:jquery-ui-sortable
+dsyko:jquery-ui-touch-punch
 
 # -- Accounts stuff
 accounts-ui
