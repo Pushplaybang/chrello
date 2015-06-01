@@ -89,7 +89,8 @@ Template.listSingle.onRendered(function() {
 			
 			Meteor.call('statusUpdate', id, priority, function(e,r) {});
 		}
-	});
+	}).disableSelection();
+	
 	$('ul.sortable').sortable({
 		connectWith : '.sortable',
 		placeholder: "ui-item-placeholder",
@@ -116,7 +117,7 @@ Template.listSingle.onRendered(function() {
 			
 			Meteor.call('itemListUpdate',item, status, priority, function(e,r) {});
 		}
-	});
+	}).disableSelection();
 });
 
 Template.listSingle.events({
@@ -194,7 +195,7 @@ if (Meteor.isServer) {
 		}, {sort: {priority : 1}} );
 
 	});
-	
+
 }
 
 Meteor.methods({
