@@ -1,20 +1,20 @@
 /* Dirty */
 * {
-    font-family: sans-serif;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	font-family: sans-serif;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Header */
 h1 {
-    font-size: 20px;
-    font-family: 'Lobster Two', cursive;
+	font-size: 20px;
+	font-family: 'Lobster Two', cursive;
 }
 
 h1 small {
 	display: block;
-    font-size: 12px;
-    font-weight: 100;
+	font-size: 12px;
+	font-weight: 100;
 	font-family : 'sans-serif';
 }
 
@@ -28,56 +28,56 @@ h1 small {
 }
 
 .add-list-wrap {
-  display: block;
-  position: relative;
-  float: left;
+	display: block;
+	position: relative;
+	float: left;
 }
 
 .addlist {
-  width: 300px;
-  display: block;
-  position: relative;
-  text-align: center;
-  padding: 20px;
-  overflow: hidden;
-  margin: 5px;
-  border: 1px dashed;
-  float: left;
+	width: 300px;
+	display: block;
+	position: relative;
+	text-align: center;
+	padding: 20px;
+	overflow: hidden;
+	margin: 5px;
+	border: 1px dashed;
+	float: left;
 }
 
 .removelist {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  line-height: 26px;
-  width: 28px;
-  height: 28px;
-  text-decoration: none;
-  text-align: center;
-  border: 2px solid;
-  border-radius: 100px;
-  font-weight: 900;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	line-height: 26px;
+	width: 28px;
+	height: 28px;
+	text-decoration: none;
+	text-align: center;
+	border: 2px solid;
+	border-radius: 100px;
+	font-weight: 900;
 }
 
 /* Lists */
 .listContainer,
 .ui-list-placeholder {
-    display: block;
-    position: relative;
-    float: left;
-    padding: 20px;
-    margin: 5px;
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    max-height: 80vh;
-    background-color: #fff;
-    border: 1px solid rgba(10,10,10,0.3);
+	display: block;
+	position: relative;
+	float: left;
+	padding: 20px;
+	margin: 5px;
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	max-height: 80vh;
+	background-color: #fff;
+	border: 1px solid rgba(10,10,10,0.3);
 }
 
 .listContainer ul {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 	max-height: 63vh;
 	min-height: 60px;
 	overflow-y: scroll;
@@ -85,8 +85,8 @@ h1 small {
 }
 
 .listContainer h2 {
-    text-transform: uppercase;
-    margin-top: 0;
+	text-transform: uppercase;
+	margin-top: 0;
 }
 
 /* Cards */
@@ -102,26 +102,26 @@ h1 small {
 }
 
 .card:after {
-    content: ' ';
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 10%;
-    top: 100%;
-    left: 0px;
-    background-color: rgb(77, 147, 208);
+	content: ' ';
+	display: block;
+	position: absolute;
+	height: 4px;
+	width: 10%;
+	top: 100%;
+	left: 0px;
+	background-color: rgb(77, 147, 208);
 }
 
 .card .remove {
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-align: center;
-  text-decoration: none;
-  line-height: 25px;
-  height: 25px;
-  width: 25px;
-  margin-top: 8px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	text-decoration: none;
+	line-height: 25px;
+	height: 25px;
+	width: 25px;
+	margin-top: 8px;
 }
 
 /* Additional styling for jQuery UI */
@@ -144,8 +144,13 @@ li.ui-sortable-helper {
 
 /* Login Buttons */
 div#login-buttons {
-  top: 25px;
-  right: 25px;
-  position: absolute;
+	top: 25px;
+	right: 25px;
+	position: absolute;
 }
 
+.notice {
+	height: 80vh;
+	text-align: center;
+	padding: 20%;
+}
