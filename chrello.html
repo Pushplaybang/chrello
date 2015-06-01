@@ -1,0 +1,91 @@
+<head>
+	<title>sort-it-1</title>
+	<script type="text/javascript">
+	  WebFontConfig = {
+	    google: { families: [ 'Lobster+Two:700:latin' ] }
+	  };
+	  (function() {
+	    var wf = document.createElement('script');
+	    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+	      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	    wf.type = 'text/javascript';
+	    wf.async = 'true';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(wf, s);
+	  })(); </script>
+</head>
+
+<body>
+	<div class="app">
+		<header class="nav">
+			<h1>Chrellow <small>cheap as chips trello for one</small></h1>
+			{{> loginButtons align="right"}}
+		</header>
+
+		{{#if currentUser}}
+			<div class="list-view-wrap">
+				<div class="list-slide" style='width: {{ slideWidth }};'>
+					<!-- List Inner -->
+					<div class="list-constraint" style='width: {{ constraintWidth }};'>
+						{{> lists }}
+					</div>
+					
+					<!-- Add list trigger + form -->
+					<div class="add-list-wrap">
+						<form id="form-addlist" style="display:none;">
+							<input id="list-title-input" type="text" nam="title">
+							<button type="submit">Add a List</button>
+						</form>
+
+						<a href="#" class="addlist">add a List</a>
+					</div>
+
+				</div>
+			</div>
+		{{else}}
+			<div class="notice">
+				<p>Login to manage your board</p>
+			</div>
+		{{/if}}
+		<footer class="copyright">
+			<p>This is a simple prototype of the basic trello style interaction, which I needed for another app. you can check out the source <a href="#">here</a></p>
+		</footer>
+	</div>
+</body>
+
+<template name="lists">
+	{{#if lists }}
+		{{#each lists}}
+			{{>listSingle}}
+		{{/each}}
+	{{/if}}
+</template>
+
+<template name="listSingle">
+	<div class="listContainer">
+		<h2>{{ title }}</h2>
+		<a href="#" class="removelist">X</a>
+		<ul class="sortable">
+			{{#if items}}
+				{{#each items}}
+					{{> item }}
+				{{/each}}
+			{{/if}}
+		</ul>
+		<div class="add-item-wrap">
+			<form id="form-addItem" style="display:none;">
+				<input id="item-title-input" type="text" nam="title">
+				<button type="submit">Add an Item</button>
+			</form>
+			<a href="" class="addone">Add Item</a>
+		</div>
+		
+	</div>
+</template>
+
+<template name="item">
+	<li class="card">
+		{{ title }} 	
+		<a href="#" class="remove">X</a>
+	</li>
+</template>
