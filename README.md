@@ -7,4 +7,6 @@ built a tiny demo meteor app in a few hours of hacking on sunday afternoon, to s
 
 It will serve a good reference point for get sortable lists done with ordering if thats what you're after.
 
-Check it out at http://chrello.meteor.com
+Check it out at [http://chrello.meteor.com](http://chrello.meteor.com)
+
+License MIT - use at will
